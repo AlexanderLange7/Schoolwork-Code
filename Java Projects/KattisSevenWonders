@@ -1,0 +1,40 @@
+**
+ *
+ * @author Alex
+ */
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String cards = input.next();
+        int finalscore = 0;
+        int TabletTally = 0;
+        int CompassTally = 0;
+        int GearTally = 0;
+        int extrascores = 0;
+        for (int i = 0; i < cards.length(); i++) {
+            char tallycard = cards.charAt(i);
+            if (tallycard == 'G') {
+                GearTally += 1;
+            }
+            if (tallycard == 'C') {
+                CompassTally += 1;
+            }
+            if (tallycard == 'T') {
+                TabletTally += 1;
+            }
+        }
+//CALCULATE EXTRA SCORES
+       int[] tallies = {GearTally,CompassTally,TabletTally};
+       Arrays.sort(tallies);
+      
+        extrascores = 7*tallies[0];
+        finalscore = (GearTally*GearTally)+(CompassTally*CompassTally)+(TabletTally*TabletTally) + extrascores;
+        
+        
+        System.out.println(finalscore);
+    }
+}
