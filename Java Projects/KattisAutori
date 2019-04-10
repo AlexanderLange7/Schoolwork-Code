@@ -1,0 +1,24 @@
+
+/**
+ *
+ * @author Alex
+ */
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);
+       
+     String a = input.next();
+     String b = "";
+        for(int i = 0; i<a.length();i++){
+            Character ch = a.charAt(i);
+            if(ch.isUpperCase(ch)){
+                b += ch;
+            }
+           
+     }
+        System.out.println(b);
+    }
+}
