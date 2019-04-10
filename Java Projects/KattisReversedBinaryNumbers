@@ -1,0 +1,30 @@
+
+/**
+ *
+ * @author Alex
+ */
+//Import a Scanner
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        int i = input.nextInt();
+        //Turn input into binary
+        String binaryi =Integer.toBinaryString(i); // Bunary representation string
+        //Flip the numbers
+        StringBuilder flip = new StringBuilder();
+        flip.append(binaryi);
+        flip =flip.reverse();
+        //Convert to integer
+        String a =flip.toString();
+        int endint = Integer.parseInt(a,2);
+        System.out.println(endint);
+        
+    }
+}
+
