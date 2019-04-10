@@ -1,0 +1,26 @@
+**
+ *
+ * @author Alex
+ */
+import java.util.Scanner;
+import java.lang.Math;
+public class main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        //See how many lines we need to read.
+        int n = input.nextInt();
+        int w = input.nextInt();
+        int h = input.nextInt();
+        for(int i = 0; i < n; i++){
+            int match = input.nextInt();
+            if(match <= Math.sqrt((w*w)+(h*h))){
+            System.out.println("DA");
+            }
+            else{
+                System.out.println("NE");
+            }
+        }
+    }
+
+}
