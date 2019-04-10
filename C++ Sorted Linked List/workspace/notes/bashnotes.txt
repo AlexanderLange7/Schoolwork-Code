@@ -1,0 +1,13 @@
+cd - change directory
+g++ - compiler, asks for standard
+-o - output
+-c - produce object file
+-Wall - all warnings
+-al   - all libraries
+
+cd/ rm rf* WILL DELETE EVERYTHING. DON'T DO IT.
+
+
+in makefile, the blue text is what is being made. the next thing listed is what that depends on
+Makefiles also show what standard we use to compile each.
+

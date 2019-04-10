@@ -1,0 +1,30 @@
+You can create templates. Making structures generic allows them to adapt to
+different data types
+
+1. Class defined as a template
+/**
+* Class representing a simple, templated singly-linked list.
+*/
+template < class T > class SLL
+{ ...more code
+
+
+2. Describe type for the class when you declare an object
+
+SLL < int > list;
+    for (int i = 0; i<10; i++)
+    {
+        list.add (i);
+    }
+    
+    
+3. The compiler writes a version of SLL that uses the type you specified in part 2
+
+
+C++ Files are compiled separately and compile into one executable.
+
+Since templates are generic, the compiled version cannot be produced until the 
+compiler sees what type you want to use (SLL<int>, SLL<string>, SLL<Bandit>, etc.)
+
+Thus, our coding practice will consolidate both the declaration and implementation
+of the class' methods into one .h file, rather than separate .h and .cpp files.

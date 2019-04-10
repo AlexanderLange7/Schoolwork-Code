@@ -1,0 +1,14 @@
+cd - change directory
+g++ - compiler, asks for standard
+-o - output
+-c - produce object file
+-Wall - all warnings
+-al   - all libraries
+
+in makefile, the blue text is what is being made. the next thing listed is what that depends on
+
+
+
+/t makes a tab in a file for concatenation
+
+arrays are not objects, so we may need magic numbers
