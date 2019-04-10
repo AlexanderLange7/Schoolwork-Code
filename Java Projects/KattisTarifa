@@ -1,0 +1,31 @@
+
+
+/*
+ * @author Alex
+ */
+import java.util.Scanner;
+public class main {
+   
+    public static void main(String [] args){
+        int ADD = 0;
+        int tot = 0;
+        Scanner plan = new Scanner(System.in);
+        //Read our allotment for a month
+        int X = plan.nextInt();
+        //Read how many months we get
+        int N = plan.nextInt();
+        //For the amount of months we get
+        for(int i = 0; i < N; i++){
+            //Read how many we used this month
+            int placehold = plan.nextInt();
+            //Make a variable equal to the amount we used
+            ADD += placehold;
+            //Get the total amount of megs you should have after n+1 months
+            tot = ((N+1)*X);
+        }
+             
+        //Print the total we get minus what we've used.
+System.out.println(tot - ADD);
+
+    }
+}
