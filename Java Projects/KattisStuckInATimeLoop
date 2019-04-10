@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class main{
+
+public static void main(String [] args){
+    Scanner it = new Scanner(System.in);
+    int a = it.nextInt();
+    int count = 0;
+        for(int i = 0; i<a; i++){
+            count++;
+            System.out.println(count + " Abracadabra");
+        }
+    
+    
+}
+}
