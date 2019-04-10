@@ -1,0 +1,26 @@
+using System;
+namespace HelloWorld
+{
+    class Hello
+    {
+        public static void Main()
+        {
+         int i = Convert.ToInt32(Console.ReadLine());
+
+            for (int x = 0; x < i; x++) {
+                int j = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(factorial(j) % 10);
+            }
+            Console.ReadKey();
+
+
+        }
+        public static int factorial(int i) {
+            if (i > 0) { return i * factorial(i - 1); }
+            else { return 1; }
+        }
+
+
+    }
+
+}
