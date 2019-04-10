@@ -1,0 +1,14 @@
+using System;
+namespace HelloWorld
+{
+    class Hello
+    {
+        static void Main()
+        {
+            for (int i = 0; i < 30; i++) {
+                Console.WriteLine("1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1");
+            }
+            Console.ReadKey();
+        }
+    }
+}
