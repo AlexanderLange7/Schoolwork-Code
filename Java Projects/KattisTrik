@@ -1,0 +1,46 @@
+
+/**
+ *
+ * @author Alex
+ */
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);
+       String a = input.next();
+       int location = 1;
+       for(int i = 0; i< a.length();i++){
+            Character ch = a.charAt(i);
+            if(ch == 'A'){
+              if(location == 2){
+                 location = 1; 
+              }
+              else if(location == 1){
+                  location = 2;
+              }
+            }
+            if(ch == 'B'){
+              if(location==2){
+                  location = 3;
+              }
+              else if(location==3){
+                  location = 2;
+              }
+            }
+            if(ch == 'C'){
+                if(location==1){
+                    location = 3;
+                }
+                else if(location==3){
+                    location = 1;
+                }
+            }
+                
+            }
+           System.out.print(location);
+     }
+        
+    }
+
