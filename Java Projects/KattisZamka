@@ -1,0 +1,58 @@
+
+/**
+ *
+ * @author Alex
+ */
+//Import a Scanner
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int L, D, X;
+
+        L = input.nextInt();
+        D = input.nextInt();
+        X = input.nextInt();
+        boolean solved1 = false;
+        boolean solved2 = false;
+
+        
+
+        //N
+        for (int i = L; i <= D && solved1 == false; i++) {
+            int template = i;
+            int num = 0;
+            while(template>0){
+                num+=(template%10);
+                template=(template/10);
+            }
+            if (num == X) {
+                
+                System.out.println(i);
+                solved1 = true;
+            }
+        }
+
+        
+        
+        //M
+        for (int i = D; i >= L && solved2 == false; i--) {
+           int template = i;
+           int num = 0;
+            while(template>0){
+                num+=(template%10);
+                template=(template/10);
+                
+            }
+            if (num == X) {
+                System.out.println(i);
+                solved2 = true;
+            }
+
+        }
+    }
+}
