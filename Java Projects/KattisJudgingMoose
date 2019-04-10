@@ -1,0 +1,31 @@
+
+/**
+ *
+ * @author Alex
+ */
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);
+      int l = input.nextInt();
+      int r = input.nextInt();
+       
+      if(l != r){
+          if(l>r){
+      System.out.println("Odd " + 2*l );
+          }
+          if (r>l){
+              System.out.println("Odd " + 2*r);
+          }
+      }
+      if(l == r && l !=0){
+          System.out.println("Even " + 2*l);
+      }
+      if(l == r && l == 0){
+          System.out.println("Not a moose");
+      }
+        
+    }
+}
