@@ -1,0 +1,46 @@
+/**
+ *
+ * @author Alex
+ */
+//Import a Scanner
+import java.util.Scanner;
+import java.lang.Math;
+public class main {
+
+    public static void main(String[] args) {
+        
+        //READ N LINES
+        Scanner stdin = new Scanner(System.in);
+        int n = stdin.nextInt();
+        long total = 0;
+        
+        
+        for (int j = 0; j < n; j++) {
+            
+            //READ A NUMBER
+            int numtowork = stdin.nextInt();
+
+            //TURN INT TO CHARACTER ARRAY
+            String b = Integer.toString(numtowork);
+            char[] chars = b.toCharArray();
+           
+            //MAKE POWER OUT OF LAST ITEM IN ARRAY
+            double c = b.charAt(b.length()-1);
+            
+            //MAGIC ASCII NUMBERS Y E E T
+            c-=48;          
+
+            //MAKE A SUBSTRING OF ORIGINAL INPUT -1 LENGTH SIZE
+            String chars2 = b.substring(0, b.length()-1);
+            double d = Integer.parseInt(chars2);
+
+            //MATHS
+            double tot =java.lang.Math.pow(d,c);
+       total+=tot;
+        }
+        
+        //OUTPUT
+        System.out.println(total);
+
+    }
+}
