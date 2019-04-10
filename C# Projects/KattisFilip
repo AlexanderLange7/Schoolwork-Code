@@ -1,0 +1,27 @@
+using System;
+namespace helloworld
+{
+    class Hello
+    {
+
+        public static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+            char[] left = input.Substring(0, 3).ToCharArray();
+            char[] right = input.Substring(4, 3).ToCharArray();
+            Array.Reverse(left);
+            Array.Reverse(right);
+
+            String ii = left[0].ToString()+ left[1].ToString() + left[2].ToString();
+            String jj = right[0].ToString() + right[1].ToString() + right[2].ToString();
+            int i = Convert.ToInt32(ii);
+            int j = Convert.ToInt32(jj);
+
+            if (i >j){ Console.WriteLine(i); }else Console.WriteLine(j);
+
+        }
+
+
+
+    }
+}
