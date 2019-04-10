@@ -1,0 +1,46 @@
+
+/**
+ *
+ * @author Alex
+ */
+import java.util.Scanner;
+
+public class main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        //See how many lines we need to read.
+        int n = input.nextInt();
+        
+        while (n !=-1){
+        //Setup variables for first run-through
+        int total = 0;
+        int alreadycounted = 0;
+        //Go through the next n lines
+        for (int i = 0; i < n; i++) {
+            //Run-Through of the lines, one at a time.   
+            for (int j = 0; j < n; j++) {
+                //Get a new speed variable
+                int speed = input.nextInt();
+                //Get a new Elapsed Time
+                int elapse = input.nextInt();
+
+                //Add our Mileage and The amount of Hours it Took To our Run
+                total += speed * (elapse - alreadycounted);
+                //Set the amount of hours we already have gone.
+                alreadycounted = elapse;
+            }
+            //After Reading Every Line,
+            //Print out our mileage
+            System.out.println(total + " miles");
+//Grab a new n variable
+            n = input.nextInt();
+            total = 0;
+            alreadycounted = 0;
+        }
+
+        }
+        System.exit(0);
+    }
+
+}
