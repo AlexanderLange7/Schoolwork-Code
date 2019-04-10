@@ -1,0 +1,33 @@
+
+/**
+ *
+ * @author Alex
+ */
+//Import a Scanner
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        
+        int line = 0;
+        int currmax=0;
+        for(int i = 0; i < 5; i++){
+            
+            int valofline = 0;
+            for(int j=0; j<4;j++ ){
+                valofline+=input.nextInt();
+            }
+            if(valofline>currmax){
+                line = i+1;
+                currmax = valofline;
+            }
+        
+        }
+        System.out.println(line + " " + currmax);
+    }
+}
